@@ -13,9 +13,9 @@ RUN apt-get -qq update --fix-missing && \
 COPY sdkman.sh /bin/sdkman.sh
 RUN bash /bin/sdkman.sh
 
-ENV WA_VERSION f7381f3e4345ae421fb8647bf345b5f84d154c64
+ENV WA_VERSION 62cf2e2ab33ebf30fc713fc38eaec6ef8feff826
 RUN mkdir /apollo && \
-    curl -L https://github.com/GMOD/Apollo/archive/${WA_VERSION}.tar.gz | tar xzf - --strip-components=1 -C /apollo
+    curl -L https://github.com/erasche/Apollo/archive/${WA_VERSION}.tar.gz | tar xzf - --strip-components=1 -C /apollo
 
 COPY build.sh /bin/build.sh
 RUN cp /apollo/sample-docker-apollo-config.groovy /apollo/apollo-config.groovy && \
