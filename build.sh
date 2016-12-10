@@ -1,2 +1,2 @@
-. /root/.sdkman/bin/sdkman-init.sh && \
-cd /apollo/ && ./apollo deploy
+cd /apollo/ && \
+    ./apollo clean-all && ./apollo deploy
